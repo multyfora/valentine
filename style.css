@@ -82,7 +82,7 @@ button {
   font-weight: 700;
   justify-content: center;
   line-height: 1.75rem;
-  padding: 0.75rem 1.65rem;
+  padding: 0.75rem 3rem;
   position: relative;
   text-align: center;
   text-decoration: none #000000 solid;
@@ -122,9 +122,8 @@ button:hover:after {
   left: 2px;
 }
 
-@media (width < 800px) {
+@media (aspect-ratio < 1) {
   button {
-    padding: 0.75rem 3rem;
     font-size: 1.5rem;
   }
 }
