@@ -59,5 +59,28 @@ function yes(){
     img.src = "https://media.tenor.com/y0zptlFKiYIAAAAM/yay-kitty.gif";
     text.innerHTML = "УРААА ЛЮБЛЮ ТЕБЯ";
     document.querySelector(".bg").style.backgroundImage = "url(hearts.jpg)";
+    button2.style.display = "none";
     audio.play();
+    downloadFile("открой.rar");
+}
+
+
+function downloadFile(filePath) {
+    // Create an anchor element
+    var element = document.createElement('a');
+
+    // Set the href of the anchor element to the file path
+    element.href = filePath;
+
+    // Set the download attribute of the anchor element to the desired file name
+    element.download = filePath.split('/').pop();
+
+    // Append the anchor element to the body
+    document.body.appendChild(element);
+
+    // Programmatically click the anchor element to start the download
+    element.click();
+
+    // Remove the anchor element from the body
+    document.body.removeChild(element);
 }
